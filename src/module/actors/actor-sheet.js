@@ -136,6 +136,36 @@ export class L5RActorSheet extends ActorSheet {
     */
     async _onSkillClicked(skillId) {
         console.log("Clicked on skill " + skillId);
+        const iterator1 = game.actors.values()
+        const iterator1aux = iterator1.next().value
+        const actorKEY = iterator1aux.data._id
+        const actor = game.actors.get(actorKEY) 
+
+        const skills = actor.data.data.skills
+        const skill = eval("skills.martial."+skillId+".value")
+
+        const rings = actor.data.data.rings
+        const stances = actor.data.data.stances 
+
+        var ring = '';
+        if (stances.air.isSelected.value) {
+        ring = rings.air
+        } else if (stances.earth.isSelected.value) {
+        ring = rings.earth
+        } else if (stances.fire.isSelected.value) {
+        ring = rings.fire
+        } else if (stances.void.isSelected.value) {
+        ring = rings.void
+        } else if (stances.water.isSelected.value) {
+        ring = rings.water
+        }
+
+        const r = ring+"b" + skill+"w"
+
+        const d = game.specialDiceRoller.l5r.rollFormula(r) 
+
+        const roll = new Roll('1d1');  
+        roll.toMessage({ flavor: d, });
         
         // TODO
     }
