@@ -4,12 +4,12 @@
   "description": "System for FFG's Legend of the Five Rings (5E). This is an early alpha version, some features are still missing.",
   "version": "0.2.5",
   "templateVersion": 2,
-  "author": "L4D15",
+  "author": "raseckefa",
   "authors": [
     {
-      "name": "L4D15#2706",
+      "name": "raseckefa#2706",
       "email": "thedragonladis@gmail.com",
-      "url": "https://github.com/L4D15"
+      "url": "https://github.com/raseckefa"
     }
   ],
   "scripts": [],
@@ -37,11 +37,11 @@
   "gridUnits": "",
   "minimumCoreVersion": "0.6.0",
   "compatibleCoreVersion": "0.7.3",
-  "url": "https://github.com/L4D15/foundry-vtt-l5r",
-  "manifest": "https://raw.githubusercontent.com/L4D15/foundry-vtt-l5r/master/src/system.json",
-  "download": "https://github.com/L4D15/foundry-vtt-l5r/releases/download/0.2.5/foundry-vtt-l5r-0.2.5.zip",
+  "url": "https://github.com/raseckefa/foundry-vtt-l5r",
+  "manifest": "https://raw.githubusercontent.com/raseckefa/foundry-vtt-l5r/master/src/system.json",
+  "download": "https://github.com/raseckefa/foundry-vtt-l5r/releases/download/0.2.5/foundry-vtt-l5r-0.2.5.zip",
   "license": "",
-  "readme": "https://raw.githubusercontent.com/L4D15/foundry-vtt-l5r/master/README.md",
+  "readme": "https://raw.githubusercontent.com/raseckefa/foundry-vtt-l5r/master/README.md",
   "bugs": "",
-  "changelog": "https://raw.githubusercontent.com/L4D15/foundry-vtt-l5r/master/CHANGELOG.md"
+  "changelog": "https://raw.githubusercontent.com/raseckefa/foundry-vtt-l5r/master/CHANGELOG.md"
 }
