@@ -142,7 +142,10 @@ export class L5RActorSheet extends ActorSheet {
         const actor = game.actors.get(actorKEY) 
 
         const skills = actor.data.data.skills
-        const skill = eval("skills.martial."+skillId+".value")
+        var skill = ''
+        if (eval("skills.martial."+skillId)) {
+            skill = eval("skills.martial."+skillId+".value")
+        }
 
         const rings = actor.data.data.rings
         const stances = actor.data.data.stances 
