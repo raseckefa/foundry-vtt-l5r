@@ -143,8 +143,16 @@ export class L5RActorSheet extends ActorSheet {
 
         const skills = actor.data.data.skills
         var skill = ''
-        if (eval("skills.martial."+skillId)) {
+        if (eval("skills.artisan."+skillId)) {
+            skill = eval("skills.artisan."+skillId+".value")
+        } else if (eval("skills.martial."+skillId)) {
             skill = eval("skills.martial."+skillId+".value")
+        } else if (eval("skills.scholar."+skillId)) {
+            skill = eval("skills.scholar."+skillId+".value")
+        } else if (eval("skills.social."+skillId)) {
+            skill = eval("skills.social."+skillId+".value")
+        } else if (eval("skills.trade."+skillId)) {
+            skill = eval("skills.trade."+skillId+".value")
         }
 
         const rings = actor.data.data.rings
@@ -169,7 +177,5 @@ export class L5RActorSheet extends ActorSheet {
 
         const roll = new Roll('1d1');  
         roll.toMessage({ flavor: d, });
-        
-        // TODO
     }
 }
