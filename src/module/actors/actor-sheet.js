@@ -140,7 +140,7 @@ export class L5RActorSheet extends ActorSheet {
         const iterator1aux = iterator1.next().value
         const actorKEY = iterator1aux.data._id
         const actor = game.actors.get(actorKEY) 
-
+        
         const skills = actor.data.data.skills
         var skill = ''
         if (eval("skills.artisan."+skillId)) {
@@ -154,25 +154,26 @@ export class L5RActorSheet extends ActorSheet {
         } else if (eval("skills.trade."+skillId)) {
             skill = eval("skills.trade."+skillId+".value")
         }
+        skill = (skill === null) ? '' : skill+"w"
 
         const rings = actor.data.data.rings
         const stances = actor.data.data.stances 
 
         var ring = '';
         if (stances.air.isSelected.value) {
-        ring = rings.air
+            ring = rings.air+"b"
         } else if (stances.earth.isSelected.value) {
-        ring = rings.earth
+            ring = rings.earth+"b"
         } else if (stances.fire.isSelected.value) {
-        ring = rings.fire
+            ring = rings.fire+"b"
         } else if (stances.void.isSelected.value) {
-        ring = rings.void
+            ring = rings.void+"b"
         } else if (stances.water.isSelected.value) {
-        ring = rings.water
+            ring = rings.water+"b"
         }
 
-        const r = ring+"b" + skill+"w"
-
+        const r = ring+skill
+        console.log(r)
         const d = game.specialDiceRoller.l5r.rollFormula(r) 
 
         const roll = new Roll('1d1');  
